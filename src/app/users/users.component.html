@@ -1,0 +1,9 @@
+<div class="container mt-5">
+  <ul class="list-group">
+      <li [routerLink]="[user.id]" routerLink="active" *ngFor="let user of users" id="{{user.id}}" class="list-group-item" (click)="selectedUser(user.id)">
+          {{ user.nome }}
+      </li>
+  </ul>
+  <hr>
+  <router-outlet></router-outlet>
+</div>

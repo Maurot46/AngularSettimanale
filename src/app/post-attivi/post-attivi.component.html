@@ -1,0 +1,9 @@
+<!-- <div *ngFor="let post of posts">
+  <div class="card" *ngIf="!post.active"> -->
+<div class="card" *ngFor="let postAt of postsAttivi">
+      <app-post-card [p]="postAt" (eliminaEvent)="elimina(postAt.id)">
+        <a class="btn btn-danger" (click)="disattiva(postAt.id)">Disattiva</a>
+        <button class="btn btn-primary ms-2" [routerLink]="['/post/attivi',postAt.id]" routerLinkActive="router-link-active">Dettagli</button>
+      </app-post-card>
+</div>
+<!-- </div> -->

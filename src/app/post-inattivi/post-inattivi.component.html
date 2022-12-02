@@ -1,0 +1,10 @@
+<!-- <div *ngFor="let post of posts">
+  <div class="card" *ngIf="!post.active"> -->
+    <div class="card" *ngFor="let postIn of postsNonAttivi">
+
+      <app-post-card [p]="postIn">
+        <a class="btn btn-success" (click)="attiva(postIn.id)">Attiva</a>
+        <button class="btn btn-primary ms-2" [routerLink]="['/post/inattivi',postIn.id]" routerLinkActive="router-link-active">Dettagli</button>
+      </app-post-card>
+
+  </div>
